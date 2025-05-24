@@ -1,4 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,600;1,14..32,600&family=Karla:ital,wght@0,200..800;1,200..800&family=Lilita+One&display=swap");
 @import "tailwindcss";
+@theme {
+  --font-logo: "Lilita+One", sans-serif;
+}
+
 @plugin "daisyui"{
-  themes: pastel --default;
+  themes: rumo --default;
+}
+
+
+
+@plugin "daisyui/theme" {
+  name: "rumo";
+  default: true;
+  prefersdark: false;
+  color-scheme: "light";
+  --color-base-100: oklch(97.788% 0.004 56.375);
+  --color-base-200: oklch(93.982% 0.007 61.449);
+  --color-base-300: oklch(91.586% 0.006 53.44);
+  --color-base-content: oklch(23.574% 0.066 313.189);
+  --color-primary: oklch(50.23% 0.180 356.07);
+  --color-primary-content: oklch(97% 0.017 320.058);
+  --color-secondary: oklch(62.42% 0.154 355.02);
+  --color-secondary-content: oklch(94% 0.029 294.588);
+  --color-accent: oklch(77.56% 0.127 70.51);
+  --color-accent-content: oklch(55% 0.135 66.442);
+  --color-neutral: oklch(32.11% 0.000 0);
+  --color-neutral-content: oklch(92% 0.004 286.32);
+  --color-info: oklch(72.93% 0.117 184.99);
+  --color-info-content: oklch(29% 0.066 243.157);
+  --color-success: oklch(69% 0.17 162.48);
+  --color-success-content: oklch(26% 0.051 172.552);
+  --color-warning: oklch(70.15% 0.163 49.38);
+  --color-warning-content: oklch(28% 0.066 53.813);
+  --color-error: oklch(60.59% 0.230 12.82);
+  --color-error-content: oklch(27% 0.105 12.094);
+  --radius-selector: 1rem;
+  --radius-field: 2rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 2px;
+  --depth: 1;
+  --noise: 0;
 }
