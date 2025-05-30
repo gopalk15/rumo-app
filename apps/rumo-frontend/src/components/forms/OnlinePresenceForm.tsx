@@ -11,22 +11,22 @@ export const OnlinePresenceForm = ({register}: IOnlinePresenceFormProps) => {
                 <div className='w-full space-y-4'>
                     <label className="input" htmlFor={onlinePresenceFormFields.website}>
                         <TbWorld />
-                    <input {...register(onlinePresenceFormFields.website)} id={onlinePresenceFormFields.website} type="url" className="input input text-neutral w-full"
+                    <input {...register(onlinePresenceFormFields.website)} id={onlinePresenceFormFields.website} type="url" className="w-full"
                            placeholder="Website (optional)"/>
                     </label>
                     <label className="input" htmlFor={onlinePresenceFormFields.instagram}>
                         <FaInstagram />
-                    <input {...register(onlinePresenceFormFields.instagram)} id={onlinePresenceFormFields.instagram} type="url" className="input input text-neutral w-full"
+                    <input {...register(onlinePresenceFormFields.instagram)} id={onlinePresenceFormFields.instagram} type="url" className="w-full"
                            placeholder="Instagram Profile (optional)"/>
                     </label>
                     <label className="input" htmlFor={onlinePresenceFormFields.facebook}>
                         <FaFacebook />
-                    <input {...register(onlinePresenceFormFields.facebook)} id={onlinePresenceFormFields.facebook} type="url" className="input input text-neutral w-full"
+                    <input {...register(onlinePresenceFormFields.facebook)} id={onlinePresenceFormFields.facebook} type="url" className="w-full"
                            placeholder="Facebook Page (optional)"/>
                     </label>
                     <label className="input" htmlFor={onlinePresenceFormFields.linkedin}>
                         <FaLinkedin />
-                    <input {...register(onlinePresenceFormFields.linkedin)} id={onlinePresenceFormFields.linkedin} type="url" className="input input text-neutral w-full"
+                    <input {...register(onlinePresenceFormFields.linkedin)} id={onlinePresenceFormFields.linkedin} type="url" className="w-full"
                            placeholder="LinkedIn profile (optional)"/>
                     </label>
                 </div>
