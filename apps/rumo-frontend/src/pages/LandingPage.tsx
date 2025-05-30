@@ -1,8 +1,8 @@
-import { Header } from './components/Header'
-import logo from './assets/logo-and-name.svg'
-import {Footer} from "./components/Footer.tsx";
-import {About} from "./components/About.tsx";
-import {FeatureList} from "./components/FeatureList.tsx";
+import { Header } from '../components/Header.tsx'
+import logo from '../assets/logo-and-name.svg'
+import {Footer} from "../components/Footer.tsx";
+import {About} from "../components/About.tsx";
+import {FeatureList} from "../components/FeatureList.tsx";
 
 export const LandingPage = () => {
 
