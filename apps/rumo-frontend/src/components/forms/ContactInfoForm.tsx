@@ -20,7 +20,6 @@ export const ContactInfoForm = ({register, errors}: IContactInfoFormProps) => {
             <label className="label mb-1" htmlFor={contactInfoFormFields.phoneNumber}>Your Phone Number:</label>
             <input {...register(contactInfoFormFields.phoneNumber, {maxLength: 10, minLength: 10})} id={contactInfoFormFields.phoneNumber} type="tel"
                    className="input validator tabular-nums" required placeholder="0827637522"
-                   pattern="[0-9]*" minLength="10" maxLength="10" title="Must be 10 digits"
           />
             {errors?.phoneNumber && (<p className="validator-hint">Must be 10 digits</p>)}
         </div>

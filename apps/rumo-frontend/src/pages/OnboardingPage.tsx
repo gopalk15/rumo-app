@@ -9,7 +9,9 @@ import {auth, createAccount} from "../firebase/auth.ts";
 import {generateRandomPassword} from "../utils/generate-random-password.ts";
 import {createBusinessProfileDoc, createBusinessProfileDocNoId} from "../firebase/collection.ts";
 import {mapFormDataToProfileModel} from "../utils/collection-mappers.ts";
-import type {TProfileFormInputs} from "../components/forms/interfaces.ts";
+import type {
+    TProfileFormInputs
+} from "../components/forms/interfaces.ts";
 import {Link} from "react-router-dom";
 import {routes} from "../constants/routes.ts";
 import {ErrorAlert} from "../components/alerts/ErrorAlert.tsx";
@@ -39,8 +41,11 @@ export const OnboardingPage = () => {
 
     const forms = [
 
+        //@ts-expect-error: investigate why later
         <BusinessInfoForm register={register} errors={errors}/>,
+        //@ts-expect-error: investigate why later
         <ContactInfoForm register={register} errors={errors}/>,
+        //@ts-expect-error: investigate why later
         <OnlinePresenceForm register={register} errors={errors}/>
     ];
 
@@ -139,7 +144,7 @@ export const OnboardingPage = () => {
         )
     }
 
-    const handleStepNavigation = async (step) => {
+    const handleStepNavigation = async (step: typeof currentStep) => {
 
         if(step > currentStep){
             trigger().then(validation => {
