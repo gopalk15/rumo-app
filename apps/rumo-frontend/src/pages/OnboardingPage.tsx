@@ -26,7 +26,6 @@ export const OnboardingPage = () => {
         If user already exists, then userID will be id-exists-update
 
      */
-//@ts-expect-error Type error
     const {register, handleSubmit, trigger, formState} = useForm<TProfileFormInputs>({
         mode: "onChange",
     });
