@@ -26,8 +26,10 @@ export const OnboardingPage = () => {
         If user already exists, then userID will be id-exists-update
 
      */
-
-    const {register, handleSubmit, trigger, formState} = useForm<TProfileFormInputs>();
+//@ts-expect-error Type error
+    const {register, handleSubmit, trigger, formState} = useForm<TProfileFormInputs>({
+        mode: "onChange",
+    });
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [isProfileCreated, setIsProfileCreated] = useState<boolean>(false);
     const [isFailure, setIsFailure] = useState<boolean>(false);
@@ -165,10 +167,10 @@ export const OnboardingPage = () => {
 
 
     return (
-        <div className='flex flex-col justify-center h-screen items-center bg-secondary/30'>
-            <img src={logo} alt='Rumo Logo' className='lg:w-1/12 md:w-1/8 w-1/3 aspect-square mb-4'/>
-            <p className='text-center text-lg lg:text-md mb-4 max-w-11/12 lg:w-1/2'>You’re about to join a community where local businesses find trusted suppliers,
-                compare services, list what they offer, and build real, lasting connections.</p>
+        <div className='flex flex-col sm:py-6 justify-center h-lvh items-center bg-secondary/10'>
+            <img src={logo} alt='Rumo Logo' className='lg:w-1/12 md:w-1/8 w-28 aspect-square mt-10 mb-4 md:mb-8'/>
+            {/*<p className='text-center text-sm sm:text-lg lg:text-md mb-4 max-w-11/12 lg:w-1/2'>You’re about to join a community where local businesses find trusted suppliers,*/}
+            {/*    compare services, list what they offer, and build real, lasting connections.</p>*/}
             <fieldset className="fieldset bg-base-100 border-base-300 rounded-box w-xs border p-4 mb-8">
                 <p className='font-bold text-center text-lg'>Let’s get you set up! 🚀</p>
                 <ul className="steps my-6">

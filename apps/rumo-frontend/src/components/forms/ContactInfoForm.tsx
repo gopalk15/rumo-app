@@ -17,7 +17,7 @@ export const ContactInfoForm = ({register, errors}: IContactInfoFormProps) => {
                        placeholder="gustavo@lphermanos.co.za"/>
             </div>
 
-            <label className="label mb-1" htmlFor={contactInfoFormFields.phoneNumber}>Your Phone Number:</label>
+            <label className="label mb-1" htmlFor={contactInfoFormFields.phoneNumber}>Your Phone Number (Optional):</label>
             <input {...register(contactInfoFormFields.phoneNumber, {maxLength: 10, minLength: 10})} id={contactInfoFormFields.phoneNumber} type="tel"
                    className="input validator tabular-nums" required placeholder="0827637522"
           />

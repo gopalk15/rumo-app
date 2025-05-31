@@ -7,9 +7,9 @@ export const BusinessInfoForm = ({register, errors}: IBusinessInfoFormProps) => 
     return (
             <div className='w-full flex flex-col'>
                 <label className="label mb-1" htmlFor={businessInfoFormFields.firstName}>Your First Name:</label>
-                <div className='indicator w-full'>
+                <div className='indicator w-full focus-within[&>span]:hidden'>
                     {errors?.firstName && (
-                        <span className='indicator-item badge badge-error text-base-100'>Required</span>
+                        <span className='indicator-item badge badge-error text-base-100 transition-opacity'>Required</span>
                     )}
                     <input {...register(businessInfoFormFields.firstName, {
                         required: true
@@ -21,7 +21,7 @@ export const BusinessInfoForm = ({register, errors}: IBusinessInfoFormProps) => 
 
 
                 <label className="label mb-1" htmlFor={businessInfoFormFields.lastName}>Your Last Name:</label>
-                <div className="indicator w-full">
+                <div className="indicator w-full focus-within[&>span]:hidden">
                     {errors?.lastName && (
                         <span className='indicator-item badge badge-error text-base-100'>Required</span>
                     )}
@@ -34,7 +34,7 @@ export const BusinessInfoForm = ({register, errors}: IBusinessInfoFormProps) => 
                 </div>
 
                 <label className="label mb-1" htmlFor={businessInfoFormFields.companyName}>Your Business Name:</label>
-                <div className='indicator w-full'>
+                <div className='indicator w-full focus-within[&>span]:hidden'>
                     {errors?.companyName && (
                         <span className='indicator-item badge badge-error text-base-100'>Required</span>
                     )}
