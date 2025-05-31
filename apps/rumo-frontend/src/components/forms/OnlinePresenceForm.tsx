@@ -17,7 +17,7 @@ export const OnlinePresenceForm = ({register}: IOnlinePresenceFormProps) => {
                     <label className="input" htmlFor={onlinePresenceFormFields.instagram}>
                         <FaInstagram />
                     <input {...register(onlinePresenceFormFields.instagram)} id={onlinePresenceFormFields.instagram} type="url" className="w-full"
-                           placeholder="Instagram Profile (optional)"/>
+                           placeholder="Instagram ProfileCard (optional)"/>
                     </label>
                     <label className="input" htmlFor={onlinePresenceFormFields.facebook}>
                         <FaFacebook />
