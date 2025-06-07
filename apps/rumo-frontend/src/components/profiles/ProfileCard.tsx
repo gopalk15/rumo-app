@@ -1,19 +1,33 @@
-export const ProfileCard = ({containerClassName}: {containerClassName?: string}) => {
+interface IProfileCard {
+    logo?: {
+        url: string;
+        altText?: string;
+    }
+    title: string;
+    category?: string;
+    serviceableArea?: string;
+    description: string;
+    containerClassName?: string;
+}
+
+
+
+export const ProfileCard = ({logo, description, title, category, serviceableArea, containerClassName = ''}: IProfileCard) => {
 
     return (
-        <div className={`card bg-base-100 max-w-96 shadow-sm ${containerClassName}`}>
-            <figure >
+        <div className={`card max-w-96 shadow-sm ${containerClassName}`}>
+            <figure className='bg-transparent ld:py-2'>
                 <img
-                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                    alt="Shoes"
-                    className="rounded-xl"/>
+                    src={ logo?.url ?? '/public/rumo-logo.svg'}
+                    alt={logo?.altText ?? 'company logo'}
+                    className="rounded-xl shadow-md"/>
             </figure>
-            <div className="card-body items-center text-center">
-                <h2 className="card-title">Card Title</h2>
-                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                <div className="card-actions">
-                    <button className="btn btn-primary">Buy Now</button>
-                </div>
+            <div>
+                {category} | {serviceableArea}
+            </div>
+            <div className="card-body items-center text-center truncate">
+                <h2 className="card-title">{title}</h2>
+                <p className='truncate'>{description}</p>
             </div>
         </div>
     )

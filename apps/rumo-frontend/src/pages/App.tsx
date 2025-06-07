@@ -1,11 +1,13 @@
-import {Header} from "../components/Header.tsx";
 import {Footer} from "../components/Footer.tsx";
 import {Menu} from "../components/Menu.tsx";
 import logo from "../assets/logo-and-name.svg";
 import {Search} from "../components/Search.tsx";
 import {ProfileCard} from "../components/profiles/ProfileCard.tsx";
+import {companyProfileMocks} from "./__mocks__/company-profile.mocks.ts";
+
 
 export const App = () => {
+    const data = companyProfileMocks;
 
 
 
@@ -14,7 +16,7 @@ export const App = () => {
         <div>
             <Menu />
             <div className='flex flex-col items-center mb-28'>
-                <img src={logo} alt='Rumo Logo' className='lg:w-1/12 md:w-1/8 w-1/3 aspect-square mb-4'/>
+                <img src={logo} alt='Rumo Logo' className='lg:w-1/12 md:w-1/8 w-1/3 aspect-square mb-8'/>
                 <Search />
             </div>
             <div className='flex flex-nowrap space-y-10 px-10 gap-x-2 overflow-x-hidden snap-x scroll-smooth'>
@@ -28,14 +30,17 @@ export const App = () => {
 
             </div>
             <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 px-10'>
-                <ProfileCard/>
-                <ProfileCard/>
-                <ProfileCard/>
-                <ProfileCard/>
-                <ProfileCard/>
-                <ProfileCard/>
-                <ProfileCard/>
-                <ProfileCard/>
+                {
+                    data.map(profile =>
+
+                        profile.verified ? <ProfileCard
+                        logo={profile.logo}
+                        category={profile.businessInfo.category}
+                        serviceableArea={profile.businessInfo.serviceableArea}
+                        title={profile.businessInfo.companyName}
+                        description={profile.businessInfo?.description ?? ''}/> : undefined)
+                }
+
 
             </div>
             <Footer/>

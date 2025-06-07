@@ -1,10 +1,17 @@
+import type {ILocation} from "./location-model.ts";
+
 export interface IProfile {
     userId: string;
     userInfo: IUserInfo;
     businessInfo: IBusinessInfo;
     contactInfo: IContactInfo;
+    location?: ILocation;
     onlinePresence?: IOnlinePresence;
-
+    logo?: {
+        url: string;
+        alternativeText?: string;
+    }
+    verified: boolean;
 }
 
 export interface IUserInfo {
@@ -12,23 +19,19 @@ export interface IUserInfo {
     lastName: string;
 }
 
+
+
 export interface IBusinessInfo {
     companyName: string;
-    logoUrl?: string;
-    industry?: string;
+    category?: string;
     description?: string;
+    serviceableArea?: string;
 }
+
 
 export interface IContactInfo {
     email?: string;
     phone?: string | number;
-    address?: {
-        street: string;
-        city: string;
-        province: string;
-        postalCode: number;
-        country: string;
-    }
 }
 
 export interface IOnlinePresence {
