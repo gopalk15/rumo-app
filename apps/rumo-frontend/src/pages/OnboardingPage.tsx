@@ -92,6 +92,7 @@ export const OnboardingPage = () => {
 
             if (res.errorCode === 'auth/email-already-in-use'){
                 createBusinessProfileDocNoId(mapFormDataToProfileModel(COMMON_USER_ID, data))
+
             }else {
                 createBusinessProfileDoc(mapFormDataToProfileModel(auth.currentUser?.uid as string, data))
             }
@@ -121,7 +122,7 @@ export const OnboardingPage = () => {
         className?: string
     }) => {
         return (
-            <button disabled={isLoading} className={`btn btn-primary text-primary-content mt-4 ${className}`}>
+            <button disabled={isLoading || isProfileCreated} className={`btn btn-primary text-primary-content mt-4 ${className}`}>
                 {isLoading ? (
                     <>
                         <span className="loading loading-spinner loading-sm"></span>
