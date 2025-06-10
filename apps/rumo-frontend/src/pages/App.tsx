@@ -151,6 +151,7 @@ export const App = () => {
             <Menu/>
             {
             selectedProfile && (
+                    // @ts-expect-error Doesn't recieve null
                     <ProfileModal ref={dialogRef} closeModal={closeModal} {...selectedProfile} />
                 )
             }
@@ -185,7 +186,6 @@ export const App = () => {
                                         verified={profile.verified}
                                         tags={profile.businessInfo.tags}
                                         title={profile.businessInfo.companyName}
-                                        description={profile.businessInfo?.description ?? ''}
                                         valueProposition={profile.businessInfo?.valueProposition ?? ''}
 
                                     /> : undefined

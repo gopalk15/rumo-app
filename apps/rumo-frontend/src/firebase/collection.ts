@@ -33,7 +33,7 @@ export const createUserDocument = async (authId:string | undefined, companyName:
 
 }
 
-export const createBusinessProfileDoc = async (profileData: IProfile) => {
+export const createBusinessProfileDoc = async (profileData: Partial<IProfile>) => {
     try{
         if (profileData.userId){
             const profileDocRef = doc(firestore,collectionNames.profiles, profileData.userId) as DocumentReference<IProfile>;
@@ -51,7 +51,7 @@ export const createBusinessProfileDoc = async (profileData: IProfile) => {
 }
 
 
-export const createBusinessProfileDocNoId = async (profileData: IProfile) => {
+export const createBusinessProfileDocNoId = async (profileData: Partial<IProfile>) => {
     try {
         const profilesCollection = collection(firestore, collectionNames.profiles);
         const newProfileDoc = await addDoc(profilesCollection, {

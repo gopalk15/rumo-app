@@ -1,5 +1,5 @@
 import type {IProfile} from "../../models/profile-model.ts";
-import { RefObject} from "react";
+import type { RefObject} from "react";
 import {ProfileDataItem} from "./ProfileDataItem.tsx";
 import {MdOutlineMail} from "react-icons/md";
 import {CiLocationOn, CiPhone} from "react-icons/ci";

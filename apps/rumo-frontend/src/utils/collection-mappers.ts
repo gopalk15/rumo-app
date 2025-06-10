@@ -1,7 +1,7 @@
 import type {IProfile} from "../models/profile-model.ts";
 import type {TProfileFormInputs} from "../components/forms/interfaces.ts";
 
-export const mapFormDataToProfileModel = (userId: string,formData: TProfileFormInputs): IProfile => {
+export const mapFormDataToProfileModel = (userId: string,formData: TProfileFormInputs): Partial<IProfile> => {
     return {
         userId,
         userInfo: {
