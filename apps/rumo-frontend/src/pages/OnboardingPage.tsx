@@ -17,6 +17,7 @@ import {routes} from "../constants/routes.ts";
 import {ErrorAlert} from "../components/alerts/ErrorAlert.tsx";
 import {SuccessAlert} from "../components/alerts/SuccessAlert.tsx";
 import logo from "../assets/logo-and-name.svg";
+import {Menu} from "../components/Menu.tsx";
 
 const COMMON_USER_ID = 'id-exists-update';
 
@@ -53,7 +54,6 @@ export const OnboardingPage = () => {
     const [currentStep, setCurrentStep] = useState(0);
     const isSubmitForm = currentStep === forms.length - 1;
     const isPrevious = currentStep > 0;
-    console.log({isSubmitForm})
 
 
 
@@ -166,6 +166,7 @@ export const OnboardingPage = () => {
 
     return (
         <div className='flex flex-col justify-center h-screen items-center bg-secondary/30'>
+            <Menu containerClass='self-start'/>
             <img src={logo} alt='Rumo Logo' className='lg:w-1/12 md:w-1/8 w-1/3 aspect-square mb-4'/>
             <p className='text-center text-lg lg:text-md mb-4 max-w-11/12 lg:w-1/2'>You’re about to join a community where local businesses find trusted suppliers,
                 compare services, list what they offer, and build real, lasting connections.</p>

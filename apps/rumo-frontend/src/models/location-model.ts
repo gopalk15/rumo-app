@@ -5,10 +5,10 @@ export interface ILocation {
 
 
 export interface IAddress {
-    street: string;
-    city: string;
-    province: string;
-    country: string;
-    postalCode: string;
-    formatted: string;
+    street?: string;
+    city?: string;
+    province?: string;
+    country?: string;
+    postalCode?: string;
+    formatted?: string;
 }

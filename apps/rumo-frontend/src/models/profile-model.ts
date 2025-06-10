@@ -25,6 +25,8 @@ export interface IBusinessInfo {
     companyName: string;
     category?: string;
     description?: string;
+    valueProposition?:string;
+    tags?: string[];
     serviceableArea?: string;
 }
 
@@ -42,6 +44,7 @@ export interface IOnlinePresence {
         linkedin?: ISocialMediaLink;
         youtube?: ISocialMediaLink;
         twitter?: ISocialMediaLink;
+        tiktok?: ISocialMediaLink;
     }
 }
 
