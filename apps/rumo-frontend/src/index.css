@@ -1,13 +1,66 @@
 @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,600;1,14..32,600&family=Karla:ital,wght@0,200..800;1,200..800&family=Lilita+One&display=swap");
 @import "tailwindcss";
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+
+}
 @theme {
   --font-logo: "Lilita+One", sans-serif;
+
+  --animate-border-spin: border-spin 7s linear infinite;
+
+  @keyframes border-spin {
+    from{
+      --angle: 0deg;
+    }
+
+    to{
+      --angle: 360deg;
+    }
+
+  }
 }
 
-@plugin "daisyui"{
+@layer utilities {
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+ .search-wrapper {
+   @apply relative p-0.5 transition-all duration-300 ease-in-out focus-within:p-0 focus-within:m-0.5;
+ }
+
+  .search-wrapper::after, .search-wrapper::before {
+    @apply absolute content-[''] bg-red-500 h-[100%] w-[100%] top-[50%] left-[50%] -translate-[50%]
+      rounded-full -z-1 animate-border-spin;
+
+    background-image: conic-gradient(
+            from var(--angle),
+            oklch(62.42% 0.154 355.02),
+            oklch(72.93% 0.117 184.99),
+            oklch(77.56% 0.127 70.51),
+            oklch(62.42% 0.154 355.02)
+    );
+  }
+
+  .search-wrapper::before {
+    @apply blur-sm opacity-60;
+  }
+
+}
+
+@plugin "daisyui" {
   themes: rumo --default;
 }
-
 
 
 @plugin "daisyui/theme" {
@@ -21,7 +74,7 @@
   --color-base-content: oklch(23.574% 0.066 313.189);
   --color-primary: oklch(50.23% 0.180 356.07);
   --color-primary-content: oklch(97% 0.017 320.058);
-  --color-secondary: oklch(62.42% 0.154 355.02);
+  --color-secondary: ;
   --color-secondary-content: oklch(94% 0.029 294.588);
   --color-accent: oklch(77.56% 0.127 70.51);
   --color-accent-content: oklch(55% 0.135 66.442);
