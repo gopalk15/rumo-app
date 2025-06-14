@@ -164,7 +164,7 @@ export const App = () => {
                 {
                     catergories.map((category, index) => {
                         const isSelected = category === selectedCategory;
-                        return <div key={index} className={`badge ${isSelected ? 'badge-soft' : 'badge-outline'} badge-primary text-nowrap`} onClick={() => {
+                        return <div key={index} className={`badge badge-lg ${isSelected ? 'badge-soft' : 'badge-outline'} badge-primary text-nowrap`} onClick={() => {
                             setSearchResult(undefined);
                             setSelectedCategory(category)
                         }}>{category}</div>
@@ -172,12 +172,12 @@ export const App = () => {
                 }
 
             </div>
-            <div className='grid grid-cols-2 items-start sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 mx-4 lg:mx-18 gap-4 mb-20'>
+            <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 mx-4 lg:mx-18 gap-4 mb-20 place-items-stretch'>
                 {
                     profilesToDisplay.map(profile => {
 
                         return (
-                            <button onClick={()=> setSelectedProfile(profile)} className='object-fit'>
+                            <button onClick={()=> setSelectedProfile(profile)} className='max-w-75'>
                                 {
                                     profile.verified ? <ProfileCard
                                         logo={profile.logo}
@@ -186,6 +186,7 @@ export const App = () => {
                                         verified={profile.verified}
                                         tags={profile.businessInfo.tags}
                                         title={profile.businessInfo.companyName}
+                                        containerClassName='h-full w-full'
                                         valueProposition={profile.businessInfo?.valueProposition ?? ''}
 
                                     /> : undefined

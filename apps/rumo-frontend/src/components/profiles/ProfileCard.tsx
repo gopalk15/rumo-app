@@ -26,16 +26,16 @@ export const ProfileCard = ({logo, verified, valueProposition,tags, title, categ
 
 
     return (
-        <div className={`card max-w-75 shadow-md shadow-primary/10 bg-base-100${containerClassName}`}>
+        <div className={`card shadow-md shadow-primary/10 bg-base-100 ${containerClassName}`}>
 
-            <div className='flex justify-start'>
-                <figure className='shadow-sm shadow-accent/10'>
+            <div className='flex flex-col'>
+                <figure className='shadow-sm shadow-accent/10 w-3/4 self-center'>
                     <img
                         src={logo?.url ?? '/public/rumo-logo.svg'}
                         alt={logo?.altText ?? 'company logo'}
-                        className="rounded-xl"/>
+                        className="rounded-xl object-fit"/>
                 </figure>
-                <div className='self-center space-y-2 px-2 pt-4 '>
+                <div className='inline-flex flex-wrap gap-2 px-2 pt-4 '>
 
                     {
                         category  ? (
@@ -69,12 +69,12 @@ export const ProfileCard = ({logo, verified, valueProposition,tags, title, categ
 
             <div className="card-body items-start pt-2 px-2">
                 <h2 className="card-title font-logo text-wrap lg:text-left">{title}</h2>
-                <p className='text-sm text-neutral/90 text-left line-clamp-3'>{valueProposition}</p>
+                <p className='text-xs sm:text-sm text-neutral/90 text-left '>{valueProposition}</p>
             </div>
 
             {
                 tags ? (
-                    <div className='flex gap-2 flex-wrap p-2'>
+                    <div className='flex gap-2 flex-wrap p-1'>
                         {
                             tags.map((tag, index) => {
                                 return(

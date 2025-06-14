@@ -83,7 +83,7 @@ const rayneAndRoseBoutique: IProfile = {
     location: {
         onlineOnly: true,
         address: {
-            city: 'Durbanville',
+            city: 'Cape Town',
             province: 'Western Cape'
         }
 
@@ -224,7 +224,7 @@ const syscoEntertainment: IProfile = {
     location: {
         onlineOnly: false,
         address: {
-            city: "Durbanvile, Cape Town",
+            city: "Cape Town",
             province: "Western Cape"
         }
     },
@@ -235,11 +235,97 @@ const syscoEntertainment: IProfile = {
     verified: true
 }
 
+const perfectlyClearProducts: IProfile = {
+    userId: 'pCsB74558SYHsglI9pOSMetsmVC3',
+    userInfo: {
+        firstName: 'Mogamat',
+        lastName: 'Abdol'
+    },
+    businessInfo: {
+        companyName: 'Perfectly Clear Products',
+        category: 'Health and Wellness',
+        description: 'Perfectly Clear Products is a health and wellness company offering natural products such as raw sea moss and turmeric soap. They provide options for direct purchase, white labeling, and B2B services, delivering nationwide.',
+        valueProposition: 'Natural health and wellness products like sea moss and turmeric soap, available for consumers and B2B.',
+        tags: ['Health and Wellness', 'Natural Products', 'Sea Moss', 'Skincare', 'White Label'],
+        serviceableArea: 'Nationwide'
+    },
+    contactInfo: {
+        email: 'info@perfectlyclear.co.za',
+        phone: '0745213010'
+
+    },
+    onlinePresence: {
+        website: 'https://perfectlyclear.co.za/',
+        socialMedia: {
+            facebook: {
+                url: 'https://www.facebook.com/perfectlyclearproducts',
+            },
+            linkedin: {
+                url: 'https://www.linkedin.com/company/perfectly-clear-products'
+            }
+        }
+    },
+    location: {
+        onlineOnly: false,
+        address: {
+            city: 'Cape Town',
+            province: 'Western Cape'
+        }
+
+    },
+    logo: {
+        url: `${externalRoutes.cms}/perfectly-clear-products.png`,
+        alternativeText: 'Perfectly Clear Products logo'
+    },
+
+    verified: true,
+}
+
+const wdDesignz: IProfile = {
+    userId: 'bY1cmkSH4ya0MQe9rXjpoylDirw1',
+    userInfo: {
+        firstName: 'Warren',
+        lastName: 'Davis'
+    },
+    businessInfo: {
+        companyName: 'W.D.Designz',
+        category: 'Digital Marketing',
+        description: 'W.D.Designz is a creative agency based in Cape Town that specializes in helping businesses establish a strong brand presence. Their services include web design, graphic design, content creation, SEO, and Google Ads management to provide comprehensive digital solutions.',
+        valueProposition: 'A creative agency offering web design, graphic design, and content creation to build a strong and visually compelling brand identity.',
+        tags: ['Web Design', 'Graphic Design', 'Content Creation', 'SEO', 'Branding'],
+        serviceableArea: 'Nationwide'
+    },
+    contactInfo: {
+        email: 'wddesignz@outlook.com',
+        phone: '0691126732'
+
+    },
+    onlinePresence: {
+        website: 'https://wddesignz.co.za/',
+        socialMedia: {
+            facebook: {
+                url: 'https://web.facebook.com/w.d.designz.sa/',
+            },
+            linkedin: {
+                url: 'https://www.linkedin.com/in/warren-davis-81ab6431b/'
+            }
+        }
+    },
+    location: {
+        onlineOnly: true,
+        address: {
+            city: 'Cape Town',
+            province: 'Western Cape'
+        }
+
+    },
+    logo: {
+        url: `${externalRoutes.cms}/wd-designz.jpg`,
+        alternativeText: 'W.D.Designz logo'
+    },
+
+    verified: true,
+}
 
 
-
-
-
-
-
-export const companyProfileMocks: IProfile[] = [cottonCove, rayneAndRoseBoutique, yungskin, beanOfLife, syscoEntertainment]
+export const companyProfileMocks: IProfile[] = [cottonCove, rayneAndRoseBoutique, yungskin, beanOfLife, syscoEntertainment, perfectlyClearProducts, wdDesignz]

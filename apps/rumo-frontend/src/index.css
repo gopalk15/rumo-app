@@ -26,6 +26,12 @@
 
 @layer utilities {
 
+  .card-description {
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: break-spaces;
+  }
+
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
