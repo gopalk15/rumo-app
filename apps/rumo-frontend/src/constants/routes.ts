@@ -1,5 +1,6 @@
 export const routes = {
     home: '/',
+    landing: '/landing',
     onboarding: '/profile-onboarding',
     about: '/about',
     search: '/search'

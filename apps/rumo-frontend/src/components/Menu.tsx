@@ -13,7 +13,7 @@ export const Menu = ({containerClass = ''}: {containerClass?: string}) => {
                 </a>
             </li>
             <li>
-                <a href={routes.home} className="tooltip tooltip-right" data-tip="About">
+                <a href={routes.landing} className="tooltip tooltip-right" data-tip="About">
                     <BsInfoCircle size={iconSize}/>
                 </a>
             </li>

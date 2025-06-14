@@ -9,7 +9,8 @@ import {OnboardingPage} from "./pages/OnboardingPage.tsx";
 import {App} from "./pages/App.tsx";
 
 const router = createBrowserRouter([
-    {path: routes.home, element: <LandingPage />},
+    {path: routes.home, element: <App />},
+    {path: routes.landing, element: <LandingPage />},
     {path: routes.onboarding, element: <OnboardingPage />},
     {path: routes.search, element: <App />},
     {path: '*', element: <NotFoundPage />},
