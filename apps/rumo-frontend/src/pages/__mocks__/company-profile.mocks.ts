@@ -13,7 +13,7 @@ const cottonCove: IProfile = {
         category: 'Online Retail', // Business category to place on a business directory
         description: 'Personalized gifts made with love—from custom mugs and hand-burned cutting boards to keepsakes for pet lovers. Founded by Shanelle Gopal, we craft thoughtful, one-of-a-kind items that turn everyday moments into lasting memories.',
         valueProposition: 'Personalized keepsakes—custom mugs, hand‑burned boards, pet gifts—crafted with love to make everyday moments unforgettable.', // 1 sentence value proposition
-        tags: ['Personalized Gifts', 'Bespoke', 'Handmade'], //Core Identity tags 3 - 5 tags , optimize for search ability
+        tags: ['Personalized Gifts', 'Bespoke', 'Handmade', 'Pet Accessories', 'Snapa Dana'], //Core Identity tags 3 - 5 tags , optimize for search ability
         serviceableArea: 'Nationwide' // Area that the business services
     },
     contactInfo: {

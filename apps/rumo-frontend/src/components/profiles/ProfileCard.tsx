@@ -28,14 +28,14 @@ export const ProfileCard = ({logo, verified, valueProposition,tags, title, categ
     return (
         <div className={`card shadow-md shadow-primary/10 bg-base-100 ${containerClassName}`}>
 
-            <div className='flex flex-col'>
+            <div className='flex flex-col lg:flex-row'>
                 <figure className='shadow-sm shadow-accent/10 w-3/4 self-center'>
                     <img
                         src={logo?.url ?? '/public/rumo-logo.svg'}
                         alt={logo?.altText ?? 'company logo'}
                         className="rounded-xl object-fit"/>
                 </figure>
-                <div className='inline-flex flex-wrap gap-2 px-2 pt-4 '>
+                <div className='inline-flex lg:flex-col flex-wrap gap-2 px-2 pt-4 '>
 
                     {
                         category  ? (

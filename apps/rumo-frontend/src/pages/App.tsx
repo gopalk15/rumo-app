@@ -37,7 +37,7 @@ export const App = () => {
         const profileIndex = {
             userId: profile.userId,
             title: new Set<string>(profile.businessInfo.companyName.toLowerCase().split(' ')),
-            tags: new Set<string>(profile.businessInfo.tags?.map(tag => tag.toLowerCase()) ?? []),
+            tags: new Set<string>(profile.businessInfo.tags?.map((tag) => tag.toLowerCase().split(' ')).flat() ?? []),
             value: new Set<string>(profile.businessInfo.valueProposition?.toLowerCase().split(' ') ?? [])
         } as TProfileIndex
 
@@ -46,6 +46,8 @@ export const App = () => {
 
 
     }, []), [data])
+
+    console.log(profileIndex)
 
 
     const catergories = useMemo(() => {
@@ -100,6 +102,7 @@ export const App = () => {
     const searchHandler = async (input: TSearchInput) => {
         setIsSubmitting(true);
         const keywords = input.searchInput.toLowerCase().trim().split(' ');
+        console.log({keywords})
 
 
 
@@ -107,13 +110,16 @@ export const App = () => {
             let counter = 0;
             keywords.forEach(keyword => {
                 if (profile.title.has(keyword)){
+                    console.log('I am her in title')
                     counter = counter + 1
                 }
                 if(profile.tags.has(keyword)){
+                    console.log('I am her in tags')
                     counter = counter + 1;
                 }
 
                 if(profile.value.has(keyword)){
+                    console.log('I am her in value')
                     counter = counter + 1
                 }
             })
