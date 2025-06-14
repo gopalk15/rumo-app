@@ -3,6 +3,8 @@ import logo from '../assets/logo-and-name.svg'
 import {Footer} from "../components/Footer.tsx";
 import {About} from "../components/About.tsx";
 import {FeatureList} from "../components/FeatureList.tsx";
+import {Link} from "react-router-dom";
+import {routes} from "../constants/routes.ts";
 
 export const LandingPage = () => {
 
@@ -25,15 +27,16 @@ export const LandingPage = () => {
                                     Reduce sourcing guesswork and build long-term business relationships that help your business thrive.
                                     <br />
                                     <em className='font-bold'>
-                                        Join the waiting list today!
+                                        Join the Rumo Network today!
                                     </em>
                                 </p>
                                 <div className='flex gap-1'>
-                                    <button className="btn btn btn-primary w-full"><a href='#join'>
-                                        Join Now!
-                                    </a></button>
+                                    <button className="btn btn btn-primary w-full">
+                                        <Link to={routes.onboarding}>
+                                            Join Now!
+                                        </Link>
+                                    </button>
                                 </div>
-
                             </div>
                         </div>
                     </div>

@@ -1,8 +1,11 @@
 import type {PropsWithChildren } from "react";
+import {Link} from "react-router-dom";
+import {routes} from "../constants/routes.ts";
 
 export const Header = ({children} : PropsWithChildren) => {
     const navBarItems = (
         <>
+            <li><Link to={routes.search}>Directory</Link></li>
             <li><a href='#features-section'>Features</a></li>
             <li><a href="#about-section">About</a></li>
         </>
