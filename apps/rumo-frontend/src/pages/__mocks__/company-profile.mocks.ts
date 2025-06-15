@@ -327,5 +327,48 @@ const wdDesignz: IProfile = {
     verified: true,
 }
 
+const nextPhaseTechStudio: IProfile = {
+    userId: 'VFqYt0scq1cbwUOF5yNRoqLLT3S2',
+    userInfo: {
+        firstName: 'Chesray',
+        lastName: 'Hendricks'
+    },
+    businessInfo: {
+        companyName: 'NextPhase Tech Studio',
+        category: 'Digital Design & Branding',
+        description: "NextPhase Tech Studio is your all-in-one digital service hub, offering expert CV design, professional logo creation and pamphlet design. We blend creativity with technical skill to help individuals and businesses look professional and run smoothly. Whether you're upgrading your brand or fixing your tech, we bring innovation and precision to every job.",
+        valueProposition: 'Your all-in-one digital hub for creative design, branding, and tech support to help you look professional and run smoothly.',
+        tags: ['Graphic Design', 'Branding', 'CV Design', 'Logo Design', 'Digital Services'],
+        serviceableArea: 'Nationwide'
+    },
+    contactInfo: {
+        email: 'nextphasetechstudio@gmail.com',
+        phone: '0787433480'
 
-export const companyProfileMocks: IProfile[] = [cottonCove, rayneAndRoseBoutique, yungskin, beanOfLife, syscoEntertainment, perfectlyClearProducts, wdDesignz]
+    },
+    onlinePresence: {
+        website: '',
+        socialMedia: {
+            facebook: {
+                url: 'https://www.facebook.com/profile.php?id=61576463708242',
+            }
+        }
+    },
+    location: {
+        onlineOnly: true,
+        address: {
+            city: 'Cape Town',
+            province: 'Western Cape'
+        }
+
+    },
+    logo: {
+        url: `${externalRoutes.cms}/next-phase-tech-studio.jpg`,
+        alternativeText: 'NextPhase Tech Studio logo'
+    },
+
+    verified: true,
+}
+
+
+export const companyProfileMocks: IProfile[] = [cottonCove, rayneAndRoseBoutique, yungskin, beanOfLife, syscoEntertainment, perfectlyClearProducts, wdDesignz, nextPhaseTechStudio]
