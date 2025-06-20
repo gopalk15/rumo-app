@@ -343,7 +343,8 @@ const nextPhaseTechStudio: IProfile = {
     },
     contactInfo: {
         email: 'nextphasetechstudio@gmail.com',
-        phone: '0787433480'
+        phone: '0787433480',
+        whatsapp: '27787433480'
 
     },
     onlinePresence: {
@@ -351,6 +352,9 @@ const nextPhaseTechStudio: IProfile = {
         socialMedia: {
             facebook: {
                 url: 'https://www.facebook.com/profile.php?id=61576463708242',
+            },
+            instagram: {
+                url: 'https://www.instagram.com/nextphasetechstudio/'
             }
         }
     },

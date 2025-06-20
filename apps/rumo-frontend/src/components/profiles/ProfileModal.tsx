@@ -24,7 +24,7 @@ export const ProfileModal = ({closeModal, ref, ...rest}: IProfileModalProps) => 
                     <h3 className='font-bold text-lg font-logo'>{rest.businessInfo.companyName}</h3>
                     <span>{rest.businessInfo.description}</span>
                 </div>
-                <SocialMediaContainer {...rest.onlinePresence}/>
+                <SocialMediaContainer whatsappNumber={rest.contactInfo.whatsapp} {...rest.onlinePresence}/>
                 <div className='space-y-2'>
                     {
                         rest.contactInfo.email ? (<ProfileDataItem text={rest.contactInfo.email} textSize='text-md'>

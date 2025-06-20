@@ -34,6 +34,7 @@ export interface IBusinessInfo {
 export interface IContactInfo {
     email?: string;
     phone?: string | number;
+    whatsapp?: string | number;
 }
 
 export interface IOnlinePresence {

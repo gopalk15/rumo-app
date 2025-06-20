@@ -1,12 +1,13 @@
 import type {IOnlinePresence} from "../../models/profile-model.ts";
-import {FaFacebook, FaInstagram, FaLinkedin, FaTiktok, FaYoutube} from "react-icons/fa";
+import {FaFacebook, FaInstagram, FaLinkedin, FaTiktok, FaWhatsapp, FaYoutube} from "react-icons/fa";
 import {FaXTwitter} from "react-icons/fa6";
 
 export interface ISocialMediaContainer extends IOnlinePresence {
     containerClass?: string;
+    whatsappNumber?: number | string;
 
 }
-export const SocialMediaContainer = ({socialMedia, containerClass=''} : ISocialMediaContainer) => {
+export const SocialMediaContainer = ({socialMedia,whatsappNumber,containerClass=''} : ISocialMediaContainer) => {
 
     const iconProps = {
         size: '2rem',
@@ -54,6 +55,13 @@ export const SocialMediaContainer = ({socialMedia, containerClass=''} : ISocialM
                 socialMedia?.youtube ? (
                     <a href={socialMedia.youtube.url ?? ''} className={iconProps.classNames}>
                         <FaYoutube size={iconProps.size} />
+                    </a>
+                ) : undefined
+            }
+            {
+                whatsappNumber ? (
+                    <a href={`https://wa.me/${whatsappNumber}`} className={iconProps.classNames}>
+                        <FaWhatsapp size={iconProps.size} />
                     </a>
                 ) : undefined
             }
